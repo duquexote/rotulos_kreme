@@ -2,9 +2,7 @@
 
 const areaDeImpressao = 0.09;
 const custoDeImpressao = 30;
-const rotulosPorArea = 4;
-var larguraDeImpressao = 19.78
-var alturaDeImpressao = 23.84
+// const rotulosPorArea = 4;
 
 function calculate(){
   
@@ -12,12 +10,21 @@ function calculate(){
   var heigth = document.getElementById("height").value
   var quantity = document.getElementById("quantity").value
   
+  var larguraImpressao = 23.96
+  var alturaImpressao =  23.10
+  
+  var larguraRotulo = heigth
+  var alturaRotulo = width
 
- var metrosQuadradosImpressao = larguraDeImpressao * alturaDeImpressao
- var metrosQuadradosRotulo = (width + 1) * (height + 1)
+  console.log("larg: " + larguraRotulo)
+  
+   var metrosQuadradosImpressao = larguraImpressao * alturaImpressao;
+   var metrosQuadradosRotulo = (width + 1) * (heigth + 1);
+  
+  var calculoRotulos = metrosQuadradosImpressao / metrosQuadradosRotulo;
 
- var calculoRotulos = metrosQuadradosImpressao / metrosQuadradosRotulo // 10 rotulos por area | e o cliente pediu 100
- calculoRotulos / quantity
+ var calculoRotulos = (metrosQuadradosImpressao / metrosQuadradosRotulo)
+ console.log("Quantidade de rotulos: " + calculoRotulos)
 
  var valorFinal = ((areaDeImpressao * custoDeImpressao) / calculoRotulos) * 1.5
   
