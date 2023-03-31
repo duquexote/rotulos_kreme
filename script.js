@@ -6,7 +6,7 @@ const custoDeImpressao = 30;
 
 function calculate(){
  
-  // kkk
+  // 
 
   // comentario que adicionei agora
   
