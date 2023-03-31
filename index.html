@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>label budget</title>
+</head>
+<body>
+  
+
+    
+    <div class="homeScreen">
+      <div class="budget">
+        <div class="container">
+          <div class="header">
+            <p> 
+              <b>ORÇAMENTO</b> RÓTULO
+          </p>
+        </div>
+        
+        
+        <div class="my-form">
+          <div class="fields">
+            <div class="input-wrapper">
+              
+              <div class="base">
+                
+                
+                <div class="width">
+                  <label for="width">Largura (cm)</label>
+                  <input class="input-base" type="number" id="width">
+                </div>
+                
+                
+                <div class="height">
+                  <label for="height">Altura (cm)</label>
+                  <input class="input-base" type="number" id="height">
+                </div>
+                
+               </div>
+               
+                <label for="width">Quantidade </label>
+                <input type="number" id="quantity">
+                
+                <label for="width">Embalagem </label>
+                <input type="number" id="packaging">
+                
+                <label for="width">Cliente</label>
+                <input type="text" id="client">
+              </div>
+            </div>
+            
+            <button  type="button" onclick="calculate()" class="button">CALCULAR</button>
+
+            <button  type="button" class="button">ZERAR</button>
+          </div>
+        </div>
+        
+
+        
+        <div class="finalValue">
+          <div class="container-value">
+            <div class="header">
+              <p> 
+                <b>VALOR</b> FINAL
+              </p>
+            </div>
+            
+            <div class="valuers">
+              <p class="unitary-value">
+                Valor Unitário: <b>R$</b><b><span id="unity-value"></span></b>
+              </p>
+              
+              <p class="total-value">
+                Valor Total:  <b>R$</b><b><span id="totalValue"></span></b>
+              </p>
+              
+            </div>
+            
+          </div>
+   </div>
+
+
+   <script src="script.js"></script>
+  </div>
+  </body>
+  </html>
