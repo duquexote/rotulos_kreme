@@ -5,6 +5,8 @@ const custoDeImpressao = 30;
 // const rotulosPorArea = 4;
 
 function calculate(){
+ 
+  // kkk
 
   // comentario que adicionei agora
   
