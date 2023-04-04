@@ -1,41 +1,34 @@
 
-
-const areaDeImpressao = 0.09;
-const custoDeImpressao = 30;
-// const rotulosPorArea = 4;
+var areaDeImpressao = 0.21;
+ var custoDeImpressao = 30;
+var larguraImpressao = 23.02;
+var alturaImpressao =  51.5;
 
 function calculate(){
- 
-  // vsf bemsa 
-
-  // comentario que adicionei agora
   
-  var width = document.getElementById("width").value
-  var height = document.getElementById("height").value
+   // --------- DADOS DO USUÁRIO ---------
+  var larguraRotulo1 = document.getElementById("width").value
+  var alturaRotulo1 = document.getElementById("height").value
+  var alturaRotulo = parseFloat(alturaRotulo1)
+  var larguraRotulo = parseFloat(larguraRotulo1)
   var quantity = document.getElementById("quantity").value
-  
-  var larguraImpressao = 23.96
-  var alturaImpressao =  23.10
+  // --------- DADOS DO USUÁRIO ---------
 
-  console.log("larg: " + larguraRotulo)
-  
-   var metrosQuadradosImpressao = larguraImpressao * alturaImpressao;
-   var metrosQuadradosRotulo = (width + 1) * (height + 1);
-  
-  var calculoRotulos = metrosQuadradosImpressao / metrosQuadradosRotulo;
-
- var calculoRotulos = (metrosQuadradosImpressao / metrosQuadradosRotulo)
- console.log("Quantidade de rotulos: " + calculoRotulos)
-
- var valorFinal = ((areaDeImpressao * custoDeImpressao) / calculoRotulos) * 1.5
-  
-
-  multi = width * heigth
-  console.log(multi)
+  // -------- CONTAS MATEMATICAS --------
+var metrosQuadradosImpressao = larguraImpressao * alturaImpressao;
+var metrosQuadradosRotulo = (larguraRotulo + 0.4) * (alturaRotulo + 0.4)
+var calculoRotulos = metrosQuadradosImpressao / metrosQuadradosRotulo;
+var valorFinalArea = (((areaDeImpressao * custoDeImpressao) / calculoRotulos) * 1.5).toFixed(2)
+  // -------- CONTAS MATEMATICAS --------
 
  
-  document.getElementById('unity-value').innerHTML = valorFinal.toFixed(2)
-  document.getElementById('totalValue').innerHTML = (valorFinal * quantity).toFixed(2)
+  // -------- RETORNO PRA WEB -----------
+  document.getElementById('unity-value').innerHTML = valorFinalArea
+  document.getElementById('totalValue').innerHTML = (valorFinalArea * quantity)
+   // -------- RETORNO PRA WEB -----------
 
 }
+
+
+
 
