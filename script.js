@@ -24,7 +24,7 @@ var valorFinalArea = (((areaDeImpressao * custoDeImpressao) / calculoRotulos) * 
  
   // -------- RETORNO PRA WEB -----------
   document.getElementById('unity-value').innerHTML = valorFinalArea
-  document.getElementById('totalValue').innerHTML = (valorFinalArea * quantity)
+  document.getElementById('totalValue').innerHTML = (valorFinalArea * quantity).toFixed(2)
    // -------- RETORNO PRA WEB -----------
 
 }
