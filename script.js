@@ -17,7 +17,7 @@ function calculate(){
   // -------- CONTAS MATEMATICAS --------
 var metrosQuadradosImpressao = larguraImpressao * alturaImpressao;
 var metrosQuadradosRotulo = (larguraRotulo + 0.4) * (alturaRotulo + 0.4)
-var calculoRotulos = metrosQuadradosImpressao / metrosQuadradosRotulo;
+var calculoRotulos = Math.trunc(metrosQuadradosImpressao / metrosQuadradosRotulo)
 var valorFinalArea = (((areaDeImpressao * custoDeImpressao) / calculoRotulos) * 1.5).toFixed(2)
   // -------- CONTAS MATEMATICAS --------
 
@@ -28,7 +28,5 @@ var valorFinalArea = (((areaDeImpressao * custoDeImpressao) / calculoRotulos) * 
    // -------- RETORNO PRA WEB -----------
 
 }
-
-
 
 
